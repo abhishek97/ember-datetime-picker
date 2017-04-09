@@ -5,7 +5,7 @@ This README outlines the details of collaborating on this Ember addon.
 
 ## Usage
 
-`{{ember-datetime-picker onChange=onChange  onClose=onClose onOpen=onOpen className='someBootstrapClass' }}`
+`{{ember-datetime-picker onChange=onChange  onClose=onClose onOpen=onOpen className='someBootstrapClass' value=startTime }}`
 
 * onChange will fire when users selects a date from the plugin and a moment object is recieved as argument to the function.
 * formatToString will recieve selected date as moment object and exptected to return a string with some format, default is `DD-MM-YYYY HH:mm`

@@ -1,9 +1,27 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    dateToString(value){
+        const formatToString = this.get('formatToString');
+        let string = value.format('DD-MM-YYYY HH:mm');
+
+        //allow hook to modify formatToString
+                if(typeof formatToString === 'function')
+                    string = formatToString(value);
+
+        return string;
+
+    },  
     init(){
         this._super(...arguments);
-        const picker = new MaterialDatetimePicker();
+
+        const initialValue = this.get('value') || moment();
+
+        const picker = new MaterialDatetimePicker({
+            default: initialValue
+        });
+
+        this.set('selectedDateTime', this.dateToString(initialValue) );
 
         const onChange = this.get('onChange'),
               onOpen = this.get('onOpen'),
@@ -11,20 +29,12 @@ export default Ember.Component.extend({
               formatToString = this.get('formatToString');
         
 
-            picker.on('submit', (value) => {
-                
-                let string = value.format('DD-MM-YYYY HH:mm');
-                
-                //allow hook to modify formatToString
-                if(typeof formatToString === 'function')
-                    string = formatToString(value);
-                
-                this.set('selectedDateTime', string);
+            picker.on('submit', (value) => {                
+                this.set('value' , value);
+                this.set('selectedDateTime', this.dateToString(value) );
 
-                
                 if(typeof onChange === 'function')
                     onChange(value);
-
             });
 
 

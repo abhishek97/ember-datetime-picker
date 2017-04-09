@@ -1,6 +1,6 @@
 {
   "name": "ember-datetime-picker",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple addon for datetime picker component for ember",
   "keywords": [
     "ember-addon"
