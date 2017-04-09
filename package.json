@@ -6,7 +6,7 @@
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "abhishek97",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -21,7 +21,7 @@
     "ember-cli-babel": "^5.1.7",
     "ember-cli-htmlbars": "^1.1.1",
     "material-datetime-picker": "^2.3.0",
-    "moment": "^2.18.1"
+    "moment": "^2.10.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
