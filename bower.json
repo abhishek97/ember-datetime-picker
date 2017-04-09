@@ -1,0 +1,6 @@
+{
+  "name": "ember-datetime-picker",
+  "dependencies": {
+    "material-datetime-picker": "^2.3.0"
+  }
+}
