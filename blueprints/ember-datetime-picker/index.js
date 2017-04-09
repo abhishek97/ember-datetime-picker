@@ -3,7 +3,7 @@ module.exports = {
 
   afterInstall: function() {
     return this.addBowerPackagesToProject([
-        { name : 'moment'},
+        { name : 'moment' , target : '^2.10.0'},
         { name : 'material-datetime-picker'},
         { name : 'rome'}
     ])
